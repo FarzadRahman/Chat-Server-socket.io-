@@ -6,12 +6,19 @@
 
 
 <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+
 <script>
-    // var socket = io.connect('http://localhost:3000');
+
     var socket = io.connect('http://localhost:3000');
-    socket.on('news', function (data) {
+    // var socket = io();
+    socket.on('customEmit', function (data) {
         console.log(data);
-        socket.emit('my other event', { my: 'data' });
+        socket.emit('chat message', { message: 'data' });
+    });
+    socket.on('connect', function (data) {
+        console.log('socket connected');
+        socket.emit('chat message', { message: 'data' });
+
     });
 </script>
 </body>
