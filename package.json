@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "*",
-    "express": "*"
+    "express": "*",
+    "public-ip": "^2.4.0",
+    "socket.io": "*"
   }
 }
